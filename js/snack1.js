@@ -50,7 +50,7 @@ const vip =[
         tableName:'TavoloVip',
         guestName:'Maneskin',
         place:10
-    },
+    }
 ];
 
 const TavolodeiVip = vip.filter(guestvip => guestvip.tableName === "TavoloVip");
