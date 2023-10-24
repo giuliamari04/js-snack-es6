@@ -1,27 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 .tavolo {
     width: 300px;
-    height: 300px;
-    background-color: #b97a57;
+    height: 800px;
+   background-image: url(../img/legno.jpg);
     position: relative;
     margin: 50px auto;
     border: 5px solid #8b4513;
 }
-
+.my-fs{
+    font-size: 0.9em;
+}
+.tappeto{
+    background-color: rgb(201, 19, 19);
+    border: 20px solid rgb(146, 11, 11);
+    width: 40%;
+    
+}
 #TavoloVip li {
     list-style: none;
     padding: 5px;
     margin: 0;
-    background-color: #ffebcd;
-    border: 2px solid #a0522d;
     width: 100px;
     height: 70px;
     text-align: center;
     font-size: 0.9em;
+    /* overflow: hidden; */
     position: absolute;
     transition: all 1s ease; 
 }
-
+.lavagna{
+    width: 500px;
+    height: 400px;
+    background-image: url(../img/lavagna.jpg);
+    color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 10px solid rgb(80, 19, 19);
+    border-radius: 20px;
+    margin:5px;
+}
 /* Animazione */
 @keyframes enter {
     from {
@@ -34,43 +56,76 @@
     }
 }
 
+@keyframes enter-bot {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes enter-right {
+    from {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes enter-left {
+    from {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 #TavoloVip li:nth-child(1) {
-     animation: enter 1s 0s both; 
+     animation: enter-left 1s 0s both; 
      position: absolute;
      left: -120px;
      top: 0;
     
     }
 #TavoloVip li:nth-child(2) { 
-    animation: enter 1s 0.2s both; 
+    animation: enter-left 1s 0.2s both; 
     position: absolute;
     left: -120px;
     top:40%;
  }
 #TavoloVip li:nth-child(3) { 
-    animation: enter 1s 0.4s both;  
+    animation: enter-left 1s 0.4s both;  
     position: absolute;
     left: -120px;
-    bottom: 0;
+    bottom: 20%;
 }
-#TavoloVip li:nth-child(4) { animation: enter 1s 0.6s both; position: absolute;
+#TavoloVip li:nth-child(4) { animation: enter-bot 1s 0.6s both; position: absolute;
     left: 0;
     bottom: -80px;}
-#TavoloVip li:nth-child(5) { animation: enter 1s 0.8s both;position: absolute;
+#TavoloVip li:nth-child(5) { animation: enter-bot 1s 0.8s both;position: absolute;
     right: 0;
     bottom: -80px; }
 #TavoloVip li:nth-child(6) { animation: enter 1s 1s both;position: absolute;
     right: 0;
-    top: -80px; }
+    top: -18%; }
 #TavoloVip li:nth-child(7) { animation: enter 1s 1.2s both;position: absolute;
     left: 0;
-    top: -80px; }
-#TavoloVip li:nth-child(8) { animation: enter 1s 1.4s both;position: absolute;
+    top: -18%; }
+#TavoloVip li:nth-child(8) { animation: enter-right 1s 1.4s both;position: absolute;
     right: -120px;
     top: 0; }
-#TavoloVip li:nth-child(9) { animation: enter 1s 1.6s both;position: absolute;
+#TavoloVip li:nth-child(9) { animation: enter-right 1s 1.6s both;position: absolute;
     right: -120px;
     top:40% }
-#TavoloVip li:nth-child(10) { animation: enter 1s 1.8s both;position: absolute;
+#TavoloVip li:nth-child(10) { animation: enter-right 1s 1.8s both;position: absolute;
     right: -120px;
-    bottom: 0; }
+    bottom: 10%; }
