@@ -57,8 +57,8 @@ const TavolodeiVip = vip.filter(guestvip => guestvip.tableName === "TavoloVip");
 
 TavolodeiVip.forEach(guest => {
     const listItem = document.createElement("li");
-    listItem.textContent = guest.guestName + " al tavolo nr. " + guest.place;
+    listItem.textContent = guest.guestName + " al posto nr. " + guest.place;
     TavoloVip.appendChild(listItem)
 
-    console.log(guest.guestName + " al tavolo nr. " + guest.place);
+    console.log(guest.guestName + " al posto nr. " + guest.place);
 });;
