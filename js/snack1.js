@@ -1,64 +1,24 @@
 "use strict";
 
-const vip =[
-    {
-        tableName:'TavoloVip',
-        guestName:'Brad Pitt',
-        place:1
-    },
-    {
-        tableName:'TavoloVip',
-        guestName:'Johnny Depp',
-        place:2
-    },
-    {
-        tableName:'TavoloVip',
-        guestName:'Lady Gaga',
-        place:3
-    },
-    {
-        tableName:'TavoloVip',
-        guestName:'Cristiano Ronaldo',
-        place:4
-    },
-    {
-        tableName:'TavoloVip',
-        guestName:'Georgina Rodriguez',
-        place:5
-    },
-    {
-        tableName:'TavoloVip',
-        guestName:'Chiara Ferragni',
-        place:6
-    },
-    {
-        tableName:'TavoloVip',
-        guestName:'Fedez',
-        place:7
-    },
-    {
-        tableName:'TavoloVip',
-        guestName:'George Clooney',
-        place:8
-    },
-    {
-        tableName:'TavoloVip',
-        guestName:'Amal Clooney',
-        place:9
-    },
-    {
-        tableName:'TavoloVip',
-        guestName:'Maneskin',
-        place:10
-    }
-];
+let arr = [ 'Brad Pitt', 'Johnny Depp', 'Lady Gaga', 'Cristiano Ronaldo', 'Georgina Rodriguez', 'Chiara Ferragni', 'Fedez', 'George Clooney', 'Amal Clooney', 'Maneskin'];
+
+const tableName = "Tavolo Vip";
+
+const vip = arr.map((guestName, index) => ({
+  tableName: tableName,
+  guestName: guestName,
+  place: index + 1
+}));
+
+console.log(vip);
+
 const TavoloVip = document.getElementById('TavoloVip');
-const TavolodeiVip = vip.filter(guestvip => guestvip.tableName === "TavoloVip");
+const TavolodeiVip = vip.filter(guestvip => guestvip.tableName === "Tavolo Vip");
 
 TavolodeiVip.forEach(guest => {
     const listItem = document.createElement("li");
-    listItem.textContent = guest.guestName + " al posto nr. " + guest.place;
+    listItem.textContent = guest.guestName + " posto nr. " + guest.place;
     TavoloVip.appendChild(listItem)
 
     console.log(guest.guestName + " al posto nr. " + guest.place);
-});;
+});

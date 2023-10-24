@@ -40,6 +40,8 @@ const studenti = [
 ];
 
 const studentList = document.getElementById("student-list");
+const studentVotialti = document.getElementById('student-votialti');
+const studentVotialtieIdalti = document.getElementById('student-votialtieidalti');
 
 const uppercaseNames = studenti.map(student => student.name.toUpperCase());
 
@@ -52,6 +54,19 @@ uppercaseNames.forEach(name => {
     listItem.textContent = name;
     studentList.appendChild(listItem);
 });
+
+votialti.forEach(student => {
+    const listItem = document.createElement("li");
+    listItem.textContent = `${student.name} - ${student.grades}`;
+    studentVotialti.appendChild(listItem);
+});
+
+votialtiEidalti.forEach(student => {
+    const listItem = document.createElement("li");
+    listItem.textContent = `id: ${student.id}- ${student.name} - ${student.grades}`;
+    studentVotialtieIdalti.appendChild(listItem);
+});
+
 
 console.log("Studenti con voti superiori a 70:", votialti);
 console.log("Studenti con voti > 70 e id > 120:", votialtiEidalti);
