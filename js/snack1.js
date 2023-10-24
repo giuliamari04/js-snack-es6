@@ -20,7 +20,7 @@ const TavolodeiVip = vip.filter(guestvip => guestvip.tableName === "Tavolo Vip")
 TavolodeiVip.forEach(guest => {
     const listItem = document.createElement("li");
     listItem.innerHTML = `
-    <div class="card w-100 border-0 p-2" >
+    <div class="card w-100 border-0" >
     <img src="img/${guest.picture}" class="card-img-top" alt="foto vip">
     <div class="card-body  p-0">
       <h5 class="card-title my-fs">${guest.guestName}</h5>
@@ -32,3 +32,9 @@ TavolodeiVip.forEach(guest => {
 
     console.log(guest.guestName + " al posto nr. " + guest.place);
 });
+
+const crocjohnson = document.querySelector('.crocjohnson');
+
+setTimeout(function () {
+    crocjohnson.classList.remove('opacity-0');
+}, 5 * 1000);

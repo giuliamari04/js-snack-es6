@@ -44,7 +44,39 @@
     border-radius: 20px;
     margin:5px;
 }
+
+.croc{
+    width:300px;
+    position: absolute;
+    right:10px;
+    top: 40%;
+    border-radius: 50px;
+}
+
+.fumetto{
+    position: absolute;
+    right: 60px;
+    top: 30%;
+    padding: 10px;
+    border-radius: 40px;
+}
+
+.crocjohnson{
+    transition: 3s;
+}
 /* Animazione */
+
+@keyframes enter-croc {
+    0% {
+        transform: translateX(200px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 @keyframes enter {
     from {
         transform: translateY(-100px);
