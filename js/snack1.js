@@ -12,6 +12,28 @@ const vip = arr.map((guestName, index) => ({
   picture: pictures[index] 
 }));
 
+//per aggiungere tutti i maneskin a tavola
+
+// let place =1;
+// const vip = arr.map((guestName, index) => ({
+//   tableName: tableName,
+//   guestName: guestName,
+//   place: place,
+//   picture: pictures[index] 
+// }
+// if(guest==='Maneskin'){
+//   for(let i=0;i<3;i++){
+//     place++;
+//     vip.push({ 
+//     tableName:tableName,
+//     guestName:guestName,
+//     place:place
+//   })
+   
+//   }
+//   place++;
+// });
+
 console.log(vip);
 
 const TavoloVip = document.getElementById('TavoloVip');
